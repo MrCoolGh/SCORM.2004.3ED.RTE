@@ -21,9 +21,6 @@ import java.util.List;
 
 import org.sakaiproject.authz.api.SecurityAdvisor;
 import org.sakaiproject.authz.api.SecurityService;
-import org.sakaiproject.exception.IdUnusedException;
-import org.sakaiproject.exception.SakaiException;
-import org.sakaiproject.site.api.Site;
 import org.sakaiproject.user.api.User;
 
 /**
@@ -32,11 +29,6 @@ import org.sakaiproject.user.api.User;
  */
 public class MockSecurityService implements SecurityService
 {
-
-    @Override
-    public void changeToRoleViewOnSite( Site site, String role ) throws SakaiException
-    {
-    }
 
     @Override
     public void clearAdvisors()
@@ -68,8 +60,7 @@ public class MockSecurityService implements SecurityService
     }
 
     @Override
-    public boolean isUserRoleSwapped() throws IdUnusedException
-    {
+    public boolean isUserRoleSwapped() {
         return false;
     }
 

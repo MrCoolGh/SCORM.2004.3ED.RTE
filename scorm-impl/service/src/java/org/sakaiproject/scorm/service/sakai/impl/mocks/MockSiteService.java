@@ -19,7 +19,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
@@ -33,6 +32,7 @@ import org.sakaiproject.exception.IdInvalidException;
 import org.sakaiproject.exception.IdUnusedException;
 import org.sakaiproject.exception.IdUsedException;
 import org.sakaiproject.exception.PermissionException;
+import org.sakaiproject.exception.SakaiException;
 import org.sakaiproject.javax.PagingPosition;
 import org.sakaiproject.site.api.AllowedJoinableAccount;
 import org.sakaiproject.site.api.Group;
@@ -509,6 +509,11 @@ public class MockSiteService implements SiteService
     public String merge( String toSiteId, Element e, String creatorId )
     {
         return "";
+    }
+
+    @Override
+    public void activateRoleViewOnSite(String s, String s1) throws SakaiException {
+        
     }
 
     @Override
