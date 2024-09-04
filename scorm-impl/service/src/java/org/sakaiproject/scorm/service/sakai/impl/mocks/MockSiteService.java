@@ -513,7 +513,12 @@ public class MockSiteService implements SiteService
 
     @Override
     public void activateRoleViewOnSite(String s, String s1) throws SakaiException {
-        
+
+    }
+
+    @Override
+    public Optional<Site> getOptionalSite(String id) {
+        return null;
     }
 
     @Override
